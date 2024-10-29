@@ -4,10 +4,10 @@
 \alias{colplot_number_aa_in_protseq}
 \title{counts number of different aminosacids in a protein sequence and plot sit in a colplot}
 \usage{
-colplot_number_aa_in_protseq(protein_sequnce)
+colplot_number_aa_in_protseq(protein_sequence)
 }
 \arguments{
-\item{protein_sequnce}{a string of aa}
+\item{protein_sequence}{a string of aa}
 }
 \value{
 plot of number of aminoacids in a column plot
