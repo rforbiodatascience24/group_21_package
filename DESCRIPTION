@@ -1,0 +1,36 @@
+Package: centraldogma
+Type: Package
+Title: Translates DNA sequence to RNA sequence
+Version: 0.1.0
+Author: c(person(given = "Emma",
+           family = "Danoe",
+           role = c("aut", "cre"), # There must be a "cre", but there can only be one
+           email = "s203564@student.dtu.dk"), 
+           
+           person(given = "Asta",
+           family = "Zeuner",
+           role = "aut",
+           email = "s203544@student.dtu.dk"),
+           
+           person(given = "Yayi",
+           family = "Wang",
+           role = "aut",
+           email = "s243559@student.dtu.dk"),
+           
+           person(given = "Astrid",
+           family = "Ginnerup",
+           role = "aut",
+           email = "s203523@student.dtu.dk"),
+           
+           person(given = "Andrea",
+           family = "Kristensen",
+           role = "aut",
+           email = "s193769@student.dtu.dk"),
+           )
+           
+Maintainer: The package maintainer <yourself@somewhere.net>
+Description: More about what it does (maybe more than one line)
+    Use four spaces when indenting paragraphs within the Description.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
