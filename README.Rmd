@@ -33,7 +33,7 @@ knitr::opts_chunk$set(
 library(centraldogma)
 library(ggplot2)
 library(stringr)
-options(device = function() ragg::agg_png())
+options(bitmapType = 'cairo')
 ```
 
 Link to group 21 repository: https://github.com/rforbiodatascience24/group_21_package/tree/master
@@ -103,5 +103,5 @@ While the **centraldogma** package currently provides essential functions, sever
 
 ## A concluding mark
 
-Even though there is a unlimited potential in expanding packages such as **centraldogma** it is important to limit the dependencies in the package to ensure a more efficient and maintainable package and a more user-friendly experience. \n
+Even though there is a unlimited potential in expanding packages such as **centraldogma** it is important to limit the dependencies in the package to ensure a more efficient and maintainable package and a more user-friendly experience. \
 To provide such user-friendly experience, it is important tp consider the pros and cons of choosing between the `@importFrom` and `package::function()`. Using `@importFrom` enhances code readability and performance by allowing direct function calls, but it can obscure function origins and cause confusion with similarly named functions. In contrast, `package::function()` clarifies function sources and avoids namespace conflicts, making dependencies clearer for users, so a balance between both methods can improve maintainability.

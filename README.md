@@ -24,7 +24,7 @@ and returns a random DNA sequence.
 sequence_length <- 100
 dna_sequence <- generate_sequence(sequence_length)
 dna_sequence
-#> [1] "GTTAGCCCGTCTTTAGGGAAGCTAGTTCACTCGCTTCCAATGAGACGGGGGGCTCTGGTAAGGTACGATAGCACACATACGCCGACAGGTTCGGATTTGG"
+#> [1] "CGGTGGATTGTCTGCACCAGTATACTTACCTGGGTTGCCGAGACGGCCTGTAACGCCTGACTCACCGCCTACTACTTAACTTAAAGACACTAACCCGGTT"
 ```
 
 ### Step 2: Transcription - Converting DNA to RNA
@@ -36,7 +36,7 @@ sequence by replacing thymine (T) with uracil (U).
 # Transcribe the DNA sequence to RNA
 rna_sequence <- transcription(dna_sequence)
 rna_sequence
-#> [1] "GUUAGCCCGUCUUUAGGGAAGCUAGUUCACUCGCUUCCAAUGAGACGGGGGGCUCUGGUAAGGUACGAUAGCACACAUACGCCGACAGGUUCGGAUUUGG"
+#> [1] "CGGUGGAUUGUCUGCACCAGUAUACUUACCUGGGUUGCCGAGACGGCCUGUAACGCCUGACUCACCGCCUACUACUUAACUUAAAGACACUAACCCGGUU"
 ```
 
 ### Step 3: Convert RNA to Codons
@@ -49,9 +49,9 @@ first position.
 # Convert RNA sequence to codons
 codons <- RNA_to_codon(rna_sequence)
 codons
-#>  [1] "GUU" "AGC" "CCG" "UCU" "UUA" "GGG" "AAG" "CUA" "GUU" "CAC" "UCG" "CUU"
-#> [13] "CCA" "AUG" "AGA" "CGG" "GGG" "GCU" "CUG" "GUA" "AGG" "UAC" "GAU" "AGC"
-#> [25] "ACA" "CAU" "ACG" "CCG" "ACA" "GGU" "UCG" "GAU" "UUG"
+#>  [1] "CGG" "UGG" "AUU" "GUC" "UGC" "ACC" "AGU" "AUA" "CUU" "ACC" "UGG" "GUU"
+#> [13] "GCC" "GAG" "ACG" "GCC" "UGU" "AAC" "GCC" "UGA" "CUC" "ACC" "GCC" "UAC"
+#> [25] "UAC" "UUA" "ACU" "UAA" "AGA" "CAC" "UAA" "CCC" "GGU"
 ```
 
 ### Step 4: Translate Codons to Amino Acids
@@ -64,7 +64,7 @@ amino acids. This function requires a predefined **codon table** named
 # Translate codons to amino acid sequence
 amino_acid_sequence <- aa_sequence(codons)
 amino_acid_sequence
-#> [1] "VSPSLGKLVHSLPMRRGALVRYDSTHTPTGSDL"
+#> [1] "RWIVCTSILTWVAETACNA_LTAYYLT_RH_PG"
 ```
 
 ### Step 5: Visualize Amino Acid Counts
@@ -106,11 +106,12 @@ protein.
 Even though there is a unlimited potential in expanding packages such as
 **centraldogma** it is important to limit the dependencies in the
 package to ensure a more efficient and maintainable package and a more
-user-friendly experience. To provide such user-friendly experience, it
-is important tp consider the pros and cons of choosing between the
-`@importFrom` and `package::function()`. Using `@importFrom` enhances
-code readability and performance by allowing direct function calls, but
-it can obscure function origins and cause confusion with similarly named
-functions. In contrast, `package::function()` clarifies function sources
-and avoids namespace conflicts, making dependencies clearer for users,
-so a balance between both methods can improve maintainability.
+user-friendly experience.  
+To provide such user-friendly experience, it is important tp consider
+the pros and cons of choosing between the `@importFrom` and
+`package::function()`. Using `@importFrom` enhances code readability and
+performance by allowing direct function calls, but it can obscure
+function origins and cause confusion with similarly named functions. In
+contrast, `package::function()` clarifies function sources and avoids
+namespace conflicts, making dependencies clearer for users, so a balance
+between both methods can improve maintainability.
