@@ -21,6 +21,8 @@ library(stringr)
 options(device = function() ragg::agg_png())
 ```
 
+Link to group 21 repository: https://github.com/rforbiodatascience24/group_21_package/tree/master
+
 ## Overview
 
 The **centraldogma** package enables you to simulate and process DNA sequences into RNA, codons, and amino acids, ending with a barplot of amino acid counts. This vignette demonstrates the five functions in the package.

@@ -3,6 +3,9 @@ centraldogma
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
+Link to group 21 repository:
+<https://github.com/rforbiodatascience24/group_21_package/tree/master>
+
 ## Overview
 
 The **centraldogma** package enables you to simulate and process DNA
@@ -21,7 +24,7 @@ and returns a random DNA sequence.
 sequence_length <- 100
 dna_sequence <- generate_sequence(sequence_length)
 dna_sequence
-#> [1] "AGCACTGCGACACTAGCCGCCTCGCAGGATGTTGTCAGAGGACTCACTTGTATACAACCTAACGCGACCGTCACCCTGCCAGCTGGGTTGCCTTCCAAAG"
+#> [1] "GTTAGCCCGTCTTTAGGGAAGCTAGTTCACTCGCTTCCAATGAGACGGGGGGCTCTGGTAAGGTACGATAGCACACATACGCCGACAGGTTCGGATTTGG"
 ```
 
 ### Step 2: Transcription - Converting DNA to RNA
@@ -33,7 +36,7 @@ sequence by replacing thymine (T) with uracil (U).
 # Transcribe the DNA sequence to RNA
 rna_sequence <- transcription(dna_sequence)
 rna_sequence
-#> [1] "AGCACUGCGACACUAGCCGCCUCGCAGGAUGUUGUCAGAGGACUCACUUGUAUACAACCUAACGCGACCGUCACCCUGCCAGCUGGGUUGCCUUCCAAAG"
+#> [1] "GUUAGCCCGUCUUUAGGGAAGCUAGUUCACUCGCUUCCAAUGAGACGGGGGGCUCUGGUAAGGUACGAUAGCACACAUACGCCGACAGGUUCGGAUUUGG"
 ```
 
 ### Step 3: Convert RNA to Codons
@@ -46,9 +49,9 @@ first position.
 # Convert RNA sequence to codons
 codons <- RNA_to_codon(rna_sequence)
 codons
-#>  [1] "AGC" "ACU" "GCG" "ACA" "CUA" "GCC" "GCC" "UCG" "CAG" "GAU" "GUU" "GUC"
-#> [13] "AGA" "GGA" "CUC" "ACU" "UGU" "AUA" "CAA" "CCU" "AAC" "GCG" "ACC" "GUC"
-#> [25] "ACC" "CUG" "CCA" "GCU" "GGG" "UUG" "CCU" "UCC" "AAA"
+#>  [1] "GUU" "AGC" "CCG" "UCU" "UUA" "GGG" "AAG" "CUA" "GUU" "CAC" "UCG" "CUU"
+#> [13] "CCA" "AUG" "AGA" "CGG" "GGG" "GCU" "CUG" "GUA" "AGG" "UAC" "GAU" "AGC"
+#> [25] "ACA" "CAU" "ACG" "CCG" "ACA" "GGU" "UCG" "GAU" "UUG"
 ```
 
 ### Step 4: Translate Codons to Amino Acids
@@ -61,7 +64,7 @@ amino acids. This function requires a predefined **codon table** named
 # Translate codons to amino acid sequence
 amino_acid_sequence <- aa_sequence(codons)
 amino_acid_sequence
-#> [1] "STATLAASQDVVRGLTCIQPNATVTLPAGLPSK"
+#> [1] "VSPSLGKLVHSLPMRRGALVRYDSTHTPTGSDL"
 ```
 
 ### Step 5: Visualize Amino Acid Counts
